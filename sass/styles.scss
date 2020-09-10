@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(237, 252, 248);
+  font-family: 'Manrope', sans-serif;
+}
+
+.component {
+  width: 730px;
+  height: 280px;
+  border-radius: 50px;
+  margin: 10% auto;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 5px -5px rgba(0, 0, 0, 0.55);
+}
+
+.component__picture {
+  width: 285px;
+  height: auto;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  background-image: url('./../images/drawers.jpg');
+  background-size: cover;
+}
+
+.component__text {
+  width: 445px;
+  height: auto;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.component__text__footer {
+  margin: 30px;
+  margin-left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.component__text__footer--txt {
+  display: flex;
+}
+
+.component__text__footer--txt img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.component__text__footer--txt > div {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.component__text__footer--share {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(237, 241, 250);
+}
