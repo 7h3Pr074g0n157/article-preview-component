@@ -6,12 +6,13 @@
 body {
   background-color: rgb(237, 252, 248);
   font-family: 'Manrope', sans-serif;
+  font-size: 13px;
 }
 
 .component {
   width: 730px;
   height: 280px;
-  border-radius: 50px;
+  border-radius: 10px;
   margin: 10% auto;
   display: flex;
   background-color: rgb(255, 255, 255);
@@ -29,33 +30,45 @@ body {
 
 .component__text {
   width: 445px;
-  height: auto;
   margin: 30px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+
+  & h3 {
+    font-size: 1.4rem;
+  }
+
+  & p {
+    font-size: 0.9rem;
+  }
 }
 
 .component__text__footer {
-  margin: 30px;
-  margin-left: 0;
+  padding-right: 20px;
   display: flex;
   justify-content: space-between;
-}
 
-.component__text__footer--txt {
-  display: flex;
-}
+  &--txt {
+    display: flex;
 
-.component__text__footer--txt img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
+    & > img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
 
-.component__text__footer--txt > div {
-  margin-left: 30px;
-  display: flex;
-  flex-direction: column;
+    & > div {
+      margin-left: 30px;
+      display: flex;
+      flex-direction: column;
+
+      & h5,
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
 }
 
 .component__text__footer--share {
@@ -66,5 +79,39 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   background-color: rgb(237, 241, 250);
+}
+
+.component__text__footer--share-socials {
+  width: 197px;
+  height: 50px;
+  padding: 0px 25px;
+  border-radius: 5px;
+  display: none;
+  position: absolute;
+  top: -90px;
+  background-color: slategray;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: lightgray;
+}
+
+.component__text__footer--share:hover .component__text__footer--share-socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  &::after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-top: 20px solid slategray;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    position: absolute;
+    bottom: -40px;
+  }
 }
